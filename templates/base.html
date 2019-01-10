@@ -1,10 +1,25 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+    {% block extra_stylesheets %}
+
+    {% endblock %}
 </head>
 <body>
-$END$
+{% block contents %}
+
+{% endblock %}
+
+
+
+<script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+{% block extra_scripts %}
+
+{% endblock %}
 </body>
 </html>

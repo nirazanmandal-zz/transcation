@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class TsnConfig(AppConfig):
-    name = 'tsn'
+class ItemConfig(AppConfig):
+    name = 'item'

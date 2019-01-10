@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-<body>
-    {{  }}
-</body>
-</html>
+{% block contents %}
+    {{ data.display_name }}<br>
+    {{ data.actual_name }}<br>
+{% endblock %}
