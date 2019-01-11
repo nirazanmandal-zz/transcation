@@ -24,3 +24,7 @@ class UnitCreateForm(forms.ModelForm):
             return self.cleaned_data.get('website')
 
         raise ValidationError("Error encountered in website field.")
+
+
+class UnitEditForm(forms.Form):
+    pass

@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-<body>
 {% block content %}
     <div class="container">
         <div class="row mt-5">
@@ -9,11 +8,11 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="displayname">{{ form.display_name.label }}</label>
-                    {{ form.name }}
+                    {{ form.display_name }}
                 </div>
                 <div class="form-group">
                     <label for="actualname">{{ form.actual_name.label }}</label>
-                    {{ form.unit }}
+                    {{ form.actual_name }}
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

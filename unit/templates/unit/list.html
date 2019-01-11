@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container">
+        <div class="ml-5">
+            <table class="table">
+                <tr>
+                    <th>Display Name</th>
+                    <th>Actual Name</th>
+                    <th></th>
+                </tr>
+
+                {% for data in data %}
+                    <tr>
+                        <td> {{ data.display_name }} </td>
+                        <td> {{ data.actual_name }} </td>
+                        <td>
+                            <a href="{% url 'units:update' data.id %}" class="btn btn-primary">Update</a>
+{#                            <button type="submit" class="btn btn-primary">Update</button>#}
+{#                                <button type="submit" class="btn btn-primary">Update</button>#}
+                            <a href="{% url 'units:delete' data.id %}" class="btn btn-primary">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+
+
+{% endblock %}
