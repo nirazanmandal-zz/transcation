@@ -6,24 +6,20 @@
         <div class="ml-5">
             <table class="table mt-2" border="3">
                 <tr>
-                    <th>Display Name</th>
-                    <th>Actual Name</th>
+                    <th>Name</th>
+                    <th>Address</th>
                 </tr>
-
                 {% for data in data %}
                     <tr>
-                        <td> {{ data.display_name }} </td>
-                        <td> {{ data.actual_name }} </td>
+                        <td> {{ data.name }} </td>
+                        <td> {{ data.address }} </td>
                         <td>
-                            <a href="{% url 'units:update' data.id %}" class="btn btn-primary">Update</a>
-                            <a href="{% url 'units:delete' data.id %}" class="btn btn-primary">Delete</a>
+                            <a href="{% url 'customer:update' data.id %}" class=" btn btn-primary">Update</a>
+                            <a href="{% url 'customer:delete' data.id %}" class=" btn btn-primary">Delete</a>
                         </td>
                     </tr>
                 {% endfor %}
-
             </table>
         </div>
     </div>
-
-
 {% endblock %}
