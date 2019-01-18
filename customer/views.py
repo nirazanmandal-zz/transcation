@@ -2,6 +2,8 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from .forms import CustomerForm
 from .models import Customer
+
+
 # from item.views import create
 
 
@@ -32,8 +34,8 @@ def update(request, pk):
             form.save()
             return redirect("customer:list")
 
-    context['data'] = data
-    return redirect(request, 'customer/create.html', context)
+    context['form'] = form
+    return render(request, 'customer/create.html', context)
 
 
 def delete(request, pk):

@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 from unit.models import Unit
 
 
@@ -7,6 +7,9 @@ class Item(models.Model):
     name = models.CharField(max_length=20)
     unit = models.ForeignKey(Unit, related_name="items", on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=8, decimal_places=2)
+    is_deleted = models.BooleanField(default=False)
+    created_at = models.DateField(auto_now_add=True)
+    update_at = models.DateField(auto_now=True)
 
     class Meta:
         db_table = 'items'
@@ -15,3 +18,13 @@ class Item(models.Model):
 
     def __str__(self):
         return self.name
+
+    # def soft_delete(self):
+    #     self.is_deleted = True
+    #     self.save()
+    #
+    # def undo(self):
+    #     self.is_deleted = False
+    #     self.save()
+
+
