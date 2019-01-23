@@ -13,17 +13,14 @@ class UnitCreateForm(forms.ModelForm):
         ]
 
         widgets = {
-            'display_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'actual_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'display_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'E.g. kg, ltr, mtr...'}),
+            'actual_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'E.g. Kilogram, Liter, Meter...'}),
         }
 
-    def clean_website(self):
-        regx = re.compile(
-            '^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$')
-        if regx.match(self.cleaned_data.get('website')):
-            return self.cleaned_data.get('website')
-
-        raise ValidationError("Error encountered in website field.")
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.fields['display_name'].empty_label = 'e.g. kg, ltr, mtr...'
+    #     self.fields['actual_name'].empty_label = 'e.g. Kilogram, Liter, Meter...'
 
 
 class UnitEditForm(forms.Form):

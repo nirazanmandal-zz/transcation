@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^customers/', include('customer.urls')),
     url(r'^items/', include('item.urls')),
     url(r'^units/', include('unit.urls')),
+    url(r'^transactions/', include('txn.urls')),
 ]

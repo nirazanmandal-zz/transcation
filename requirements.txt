@@ -1,0 +1,7 @@
+Django==1.11.18
+django-adminlte2==0.4.1
+django-fontawesome==1.0
+django-widget-tweaks==1.4.3
+psycopg2-binary==2.7.6.1
+pytz==2018.9
+PyYAML==3.13

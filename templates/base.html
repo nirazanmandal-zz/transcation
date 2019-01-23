@@ -1,77 +1,111 @@
 {% load staticfiles %}
+{% load fontawesome %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/components-font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/css/styles.css' %}">
     {% block extra_stylesheets %}
 
     {% endblock %}
 </head>
 <body>
 
-<div class="p-3 mb-2 bg-green text-white">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'item:create' %}">Logo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="font-weight: bold;font-size: large">
+    <a class="navbar-brand ml-5" style="font-size: xx-large; color: #171a1d" href="{% url 'txn:index' %}"><i
+            class="fa fa-home"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse ml-5" id="navbarNavDropdown">
+        <ul class="navbar-nav">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'item:create' %}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Menu
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'units:create' %}">Add Unit</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'item:create' %}">Add Item</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Do Transaction</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-users"></i> Customer
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'customer:create' %}">Add</a>
+                    <a class="dropdown-item" href="{% url 'customer:list' %}">List</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-money"></i> Transaction
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'txn:index' %}">Create</a>
+                    <a class="dropdown-item" href="{% url 'txn:list' %}">List</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-balance-scale"></i> Unit
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'units:create' %}">Create</a>
+                    <a class="dropdown-item" href="{% url 'units:list' %}">List</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-shopping-cart"></i> Item
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'item:create' %}">Create</a>
+                    <a class="dropdown-item" href="{% url 'item:list' %}">List</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% block breadcrumb_head %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'txn:index' %}">Home</a></li>
+            {% block breadcrumb_link %}
+                <li class="breadcrumb-item"><a href="{% url 'txn:list' %}">Transaction</a></li>
+                <li class="breadcrumb-item active" aria-current="page">New</li>
+            {% endblock %}
+        </ol>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert alert-{{ message.tags }}" role="alert">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">X</a>
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            </div>
+{% endblock %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}" role="alert">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">X</a>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
-
-    {% block content %}
-
-    {% endblock %}
-
-
-
-    <script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
-    <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-
-    {% block extra_scripts %}
-
-    {% endblock %}
 </div>
+
+{% block content %}
+
+{% endblock %}
+
+
+<script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+{% block extra_scripts %}
+
+{% endblock %}
 </body>
 </html>

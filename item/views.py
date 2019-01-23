@@ -1,5 +1,8 @@
+import json
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.urls import reverse
 from .models import Item
 from .forms import ItemCreateForm
 
@@ -35,26 +38,30 @@ def edit(request, pk):
 
 
 def delete(request, pk):
-    try:
-        data = Item.objects.get(id=pk)
-    except Item.DoesNotExist:
-        messages.error(request, "Item not found")
+    context = {}
+    if request.method == "POST":
+        try:
+            data = Item.objects.get(id=pk)
+        except Item.DoesNotExist:
+            messages.error(request, "Item not found")
+            return redirect("item:list")
+
+        choice = request.GET.get('choice')
+        if choice == "undo":
+            context['status'] = 'Undo'
+            data.is_deleted = False
+            data.save()
+        elif choice == "trash":
+            data.is_deleted = True
+            data.save()
+        elif choice == "delete" and data.is_deleted is True:
+            data.delete()
+
+        messages.success(request, 'Deleted successfully.')
         return redirect("item:list")
 
-    choice = request.GET.get('choice')
-    print(choice)
-    print(data.is_deleted)
-    if choice == "undo":
-        data.is_deleted = False
-        data.save()
-    elif choice == "trash":
-        data.is_deleted = True
-        data.save()
-    elif choice == "delete" and data.is_deleted == True:
-        data.delete()
-
-    messages.success(request, 'Deleted successfully.')
-    return redirect("item:list")
+    context['url'] = reverse("item:list")
+    return render(request, 'snippest/delete.html', context)
 
 
 def list(request):
@@ -63,3 +70,14 @@ def list(request):
     data = Item.objects.all()
     context['data'] = data
     return render(request, 'item/list.html', context)
+
+
+def item_unit_price(request, pk):
+    try:
+        data = Item.objects.get(id=pk)
+    except Item.DoesNotExist:
+        return HttpResponse("Unable to find data.", status=400)
+
+    context = {"unit_price": str(data.price)}
+    context = json.dumps(context)
+    return HttpResponse(context, "application/json", status=200)

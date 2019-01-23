@@ -4,7 +4,7 @@ from unit.models import Unit
 
 
 class Item(models.Model):
-    name = models.CharField(max_length=20)
+    iname = models.CharField(max_length=20)
     unit = models.ForeignKey(Unit, related_name="items", on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     is_deleted = models.BooleanField(default=False)
@@ -17,14 +17,7 @@ class Item(models.Model):
         verbose_name_plural = 'Items'
 
     def __str__(self):
-        return self.name
+        return self.iname
 
-    # def soft_delete(self):
-    #     self.is_deleted = True
-    #     self.save()
-    #
-    # def undo(self):
-    #     self.is_deleted = False
-    #     self.save()
 
 

@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'item',
     'unit',
     'customer',
-    'txn'
+    'txn',
+    'widget_tweaks',
+    'fontawesome',
 ]
 
 MIDDLEWARE = [

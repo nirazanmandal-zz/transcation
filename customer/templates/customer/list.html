@@ -1,25 +1,37 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block breadcrumb_link %}
+    <li class="breadcrumb-item active" aria-current="page">Customer</li>
+{% endblock %}
+
 {% block content %}
+
     <div class="container">
-        <div class="ml-5">
-            <table class="table table-bordered mt-2">
-                <tr>
-                    <th>Name</th>
-                    <th>Address</th>
-                </tr>
-                {% for data in data %}
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
                     <tr>
-                        <td> {{ data.name }} </td>
-                        <td> {{ data.address }} </td>
-                        <td>
-                            <a href="{% url 'customer:update' data.id %}" class=" btn btn-primary">Update</a>
-                            <a href="{% url 'customer:delete' data.id %}" class=" btn btn-primary">Delete</a>
-                        </td>
+                        <th>Customer Name</th>
+                        <th>Address</th>
+                        <th></th>
                     </tr>
-                {% endfor %}
-            </table>
+                    </thead>
+                    {% for datum in data %}
+                        <tr>
+                            <td> {{ datum.cname }} </td>
+                            <td> {{ datum.address }} </td>
+                            <td>
+                                <a href="{% url 'customer:update' datum.id %}" class=" btn btn-primary">Update</a>
+                                <a href="{% url 'customer:delete' datum.id %}" class=" btn btn-primary">Delete</a>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}

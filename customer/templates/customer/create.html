@@ -1,21 +1,70 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block breadcrumb_link %}
+    <li class="breadcrumb-item"><a href="{% url 'customer:list' %}">Customer</a></li>
+    <li class="breadcrumb-item active" aria-current="page">New</li>
+{% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container" id="form_layout">
         <div class="row mt-5">
-            <form method="post">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="name">{{ form.name.label }}</label>
-                    {{ form.name }}
-                </div>
-                <div class="form-group">
-                    <label for="unit">{{ form.address.label }}</label>
-                    {{ form.address }}
-                </div>
-                <button type="submit" class="btn btn-primary">Create</button>
-            </form>
+            <div class="col-md-8 offset-md-2">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Customer Name</label>
+                        {% if form.cname.errors %}
+                            <div class="col-sm-8">
+                                {{ form.cname | add_class:"is-invalid" }}
+                                <div class="invalid-feedback">
+                                    {{ form.cname.errors }}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="col-sm-8">
+                                {{ form.cname }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Address</label>
+                        {% if form.address.errors %}
+                            <div class="col-sm-8">
+                                {{ form.address | add_class:"is-invalid" }}
+                                <div class="invalid-feedback">
+                                    {{ form.address.errors }}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="col-sm-8">
+                                {{ form.address }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Phone Number</label>
+                        {% if form.phone_no.errors %}
+                            <div class="col-sm-8">
+                                {{ form.phone_no | add_class:"is-invalid" }}
+                                <div class="invalid-feedback">
+                                    {{ form.phone_no.errors }}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="col-sm-8">
+                                {{ form.phone_no }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-8 offset-sm-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 

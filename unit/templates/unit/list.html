@@ -2,28 +2,33 @@
 {% load staticfiles %}
 
 {% block content %}
-    <div class="container">
-        <div class="ml-5">
-            <table class="table table-bordered mt-2" border="3">
-                <tr>
-                    <th>Display Name</th>
-                    <th>Actual Name</th>
-                </tr>
 
-                {% for data in data %}
+    <div class="container">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Display Name</th>
+                        <th>Actual Name</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    {% for data in data %}
                     <tr>
                         <td> {{ data.display_name }} </td>
                         <td> {{ data.actual_name }} </td>
                         <td>
-                            <a href="{% url 'units:update' data.id %}" class="btn btn-primary">Update</a>
-                            <a href="{% url 'units:delete' data.id %}" class="btn btn-primary">Delete</a>
+                            <a href="{% url 'units:update' data.id %}" class="btn">
+                                <i class="fa fa-pencil-square-o"></i></a>
+                            <a href="{% url 'units:delete' data.id %}" class="btn">
+                                <i class="fa fa-trash text-danger"></i></a>
                         </td>
                     </tr>
                 {% endfor %}
-
-            </table>
+                </table>
+            </div>
+            <a href="{% url 'units:create' %}" class=" btn btn-primary"><i class="fa fa-plus"></i> Add</a>
         </div>
     </div>
-
-
 {% endblock %}

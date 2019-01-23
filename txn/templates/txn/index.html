@@ -1,10 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
 
-</body>
-</html>
+{% block breadcrumb_link %}
+    <li class="breadcrumb-item"><a href="{% url 'txn:list' %}">Transaction</a></li>
+    <li class="breadcrumb-item active" aria-current="page">New</li>
+{% endblock %}
+
+{% block content %}
+    <div class="container" id="form_layout">
+        <div class="row mt-5">
+            <div class="col-md-8 offset-md-2">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" >Customer Name</label>
+                        {% if form.cname.errors %}
+                            <div class="col-sm-8">
+                                {{ form.cname | add_class:"is-invalid" }}
+                                <div class="invalid-feedback">
+                                    {{ form.cname.errors }}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="col-sm-8">
+                                {{ form.cname }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" id="id_item">Item Name</label>
+                        {% if form.itemname.errors %}
+                            <div class="col-sm-8">
+                                {{ form.itemname | add_class:"is-invalid" }}
+                                <div class="invalid-feedback">
+                                    {{ form.itemname.errors }}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="col-sm-8">
+                                {{ form.itemname }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Quantity</label>
+                        {% if form.quantity.errors %}
+                            <div class="col-sm-8">
+                                {{ form.quantity | add_class:"is-invalid" }}
+                                <div class="invalid-feedback">
+                                    {{ form.quantity.errors }}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="col-sm-8">
+                                {{ form.quantity }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Total</label>
+                        <div class="col-sm-8">
+                            {{ form.total }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-8 offset-sm-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block extra_scripts %}
+    <script>
+        $('body').on('input', '#id_quantity', function () {
+            var id = $('#id_itemname').val();
+            var value = $(this).val();
+            $.ajax({
+                type: 'json',
+                method: 'GET',
+                url: '/items/unit-price/'+ id +'/',
+                error: function () {
+                    console.log("error");
+                },
+                success: function (data) {
+                    var price = data['unit_price'];
+                    var total = value * price;
+                    $('#id_total').val(total);
+                },
+            });
+
+        });
+    </script>
+{% endblock %}

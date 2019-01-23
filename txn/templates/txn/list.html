@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th>S.N</th>
+                        <th>Customer Name</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                        <th>Transaction Date</th>
+                        <th>paid</th>
+                    </tr>
+                    </thead>
+                    {% for datum in data %}
+                        <tr>
+                            <td> {{ forloop.counter }} </td>
+                            <td> {{ datum.cname }} </td>
+                            <td> {{ datum.quantity }} </td>
+                            <td> {{ datum.total }} </td>
+                            <td> {{ datum.created_at }} </td>
+                            <td><input type="checkbox" id="{{ datum.id }}"> </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="6">No Data</td>
+                        </tr>
+                    {% endfor %}
+
+                </table>
+                <a href="{% url 'item:create' %}" class=" btn btn-primary"><i class="fa fa-plus"></i> Add</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
