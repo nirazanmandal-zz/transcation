@@ -17,7 +17,12 @@ class Transactions(models.Model):
         verbose_name_plural = 'Transactions'
 
     def __str__(self):
-        return self.cname
+        return str(self.cname)
 
     def clean(self):
         pass
+
+    def is_paid(self):
+        if str(self.cname).lower() == "cash":
+            return True
+        return False

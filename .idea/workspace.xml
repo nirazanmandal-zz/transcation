@@ -2,33 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae8b29f-55a9-439d-9fd8-d7b5490989f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/snippest/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d78f3624-8623-4ecb-8bb7-3c2aa8d681d5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d78f3624-8623-4ecb-8bb7-3c2aa8d681d5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d78f3624-8623-4ecb-8bb7-3c2aa8d681d5/storage_v2/_src_/database/transaction.3tKgfw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d78f3624-8623-4ecb-8bb7-3c2aa8d681d5/storage_v2/_src_/database/transaction.3tKgfw/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/snippest/paid.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/templates/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customer/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customer/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/item/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/item/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/item/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/templates/item/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/templates/item/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/templates/item/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/templates/item/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/item/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/item/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bower_components/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bower_components/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txn/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/txn/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/snippest/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/snippest/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/txn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/txn/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txn/templates/txn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/txn/templates/txn/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/txn/templates/txn/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/txn/templates/txn/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/txn/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/txn/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/txn/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/txn/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit/templates/unit/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/unit/templates/unit/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit/templates/unit/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/unit/templates/unit/list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,10 +86,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/txn/templates/txn/list.html">
+        <entry file="file://$PROJECT_DIR$/customer/templates/customer/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="34" column="105" selection-start-line="34" selection-start-column="105" selection-end-line="34" selection-end-column="105" />
+            <state relative-caret-position="113">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/item/templates/item/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -149,18 +144,10 @@
         <option value="$PROJECT_DIR$/unit/views.py" />
         <option value="$PROJECT_DIR$/item/templates/adminlte/lib/_main_sidebar.html" />
         <option value="$PROJECT_DIR$/transaction/urls.py" />
-        <option value="$PROJECT_DIR$/item/urls.py" />
         <option value="$PROJECT_DIR$/transaction/settings.py" />
-        <option value="$PROJECT_DIR$/templates/snippest/delete.html" />
-        <option value="$PROJECT_DIR$/txn/urls.py" />
         <option value="$PROJECT_DIR$/static/bower_components/css/styles.css" />
-        <option value="$PROJECT_DIR$/txn/models.py" />
-        <option value="$PROJECT_DIR$/txn/views.py" />
-        <option value="$PROJECT_DIR$/customer/models.py" />
         <option value="$PROJECT_DIR$/item/models.py" />
-        <option value="$PROJECT_DIR$/item/views.py" />
         <option value="$PROJECT_DIR$/item/admin.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/unit/templates/unit/create.html" />
         <option value="$PROJECT_DIR$/txn/templates/txn/index.html" />
         <option value="$PROJECT_DIR$/txn/forms.py" />
@@ -168,11 +155,21 @@
         <option value="$PROJECT_DIR$/customer/forms.py" />
         <option value="$PROJECT_DIR$/item/forms.py" />
         <option value="$PROJECT_DIR$/customer/templates/customer/create.html" />
-        <option value="$PROJECT_DIR$/customer/templates/customer/list.html" />
         <option value="$PROJECT_DIR$/item/templates/item/create.html" />
-        <option value="$PROJECT_DIR$/item/templates/item/list.html" />
         <option value="$PROJECT_DIR$/unit/templates/unit/list.html" />
+        <option value="$PROJECT_DIR$/templates/snippest/delete.html" />
+        <option value="$PROJECT_DIR$/item/urls.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/item/templates/item/list.html" />
+        <option value="$PROJECT_DIR$/txn/templates/txn/paid.html" />
+        <option value="$PROJECT_DIR$/item/views.py" />
+        <option value="$PROJECT_DIR$/txn/urls.py" />
         <option value="$PROJECT_DIR$/txn/templates/txn/list.html" />
+        <option value="$PROJECT_DIR$/templates/snippest/paid.html" />
+        <option value="$PROJECT_DIR$/txn/views.py" />
+        <option value="$PROJECT_DIR$/customer/models.py" />
+        <option value="$PROJECT_DIR$/txn/models.py" />
+        <option value="$PROJECT_DIR$/customer/templates/customer/list.html" />
       </list>
     </option>
   </component>
@@ -200,20 +197,38 @@
             <path>
               <item name="transaction" type="b2602c69:ProjectViewProjectNode" />
               <item name="transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="txn" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="transaction" type="b2602c69:ProjectViewProjectNode" />
               <item name="transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="txn" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="transaction" type="b2602c69:ProjectViewProjectNode" />
               <item name="transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="txn" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="txn" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transaction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transaction" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transaction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transaction" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transaction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transaction" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -232,7 +247,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -302,29 +317,31 @@
       <workItem from="1547795472137" duration="16535000" />
       <workItem from="1547958402883" duration="1901000" />
       <workItem from="1548051126378" duration="19670000" />
-      <workItem from="1548223683188" duration="18438000" />
+      <workItem from="1548223683188" duration="18694000" />
+      <workItem from="1548294693375" duration="4729000" />
+      <workItem from="1548314728399" duration="19270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113711000" />
+    <option name="totallyTimeSpent" value="137966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="696" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50265956" side_tool="true" weight="0.21060605" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4973404" visible="true" weight="0.21666667" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4973404" visible="true" weight="0.22348484" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.40357143" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.40035588" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Python Console" order="4" weight="0.32857144" />
+      <window_info anchor="bottom" id="Python Console" order="4" weight="0.36607143" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.32857144" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -375,16 +392,6 @@
     <entry file="file://$PROJECT_DIR$/transaction/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/customer/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -396,17 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#1142#1168#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -424,29 +420,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/transaction/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding>
-            <element signature="e#316#325#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/bower_components/components-font-awesome/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1215" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/transaction/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#645#686#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/bower_components/css/styles.css">
@@ -456,79 +432,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/snippest/delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/item/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txn/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txn/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txn/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/customer/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d78f3624-8623-4ecb-8bb7-3c2aa8d681d5/database/transaction/schema/public/table/customer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d78f3624-8623-4ecb-8bb7-3c2aa8d681d5/database/transaction/schema/public/table/transactions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -549,13 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/item/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -566,34 +466,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="77" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit/templates/unit/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="100" selection-start-line="15" selection-start-column="100" selection-end-line="15" selection-end-column="100" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
@@ -627,13 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txn/templates/txn/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/item/templates/item/create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -641,31 +510,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customer/templates/customer/list.html">
+    <entry file="das://d78f3624-8623-4ecb-8bb7-3c2aa8d681d5/database/transaction/schema/public/table/customer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit/templates/unit/create.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        <state relative-caret-position="330">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transaction/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+          <folding>
+            <element signature="e#316#325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#1142#1168#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/item/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="65" column="74" selection-start-line="65" selection-start-column="74" selection-end-line="65" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/unit/templates/unit/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="30" column="99" selection-start-line="30" selection-start-column="99" selection-end-line="30" selection-end-column="99" />
+        <state relative-caret-position="283">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/item/templates/item/list.html">
+    <entry file="das://d78f3624-8623-4ecb-8bb7-3c2aa8d681d5/database/transaction/schema/public/table/transactions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+        <state relative-caret-position="-193">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txn/templates/txn/paid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transaction/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#645#686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/item/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txn/templates/txn/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="90" column="18" lean-forward="true" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/snippest/delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/txn/templates/txn/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="34" column="105" selection-start-line="34" selection-start-column="105" selection-end-line="34" selection-end-column="105" />
+        <state relative-caret-position="493">
+          <caret line="49" column="60" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/snippest/paid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txn/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txn/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txn/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/item/templates/item/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/templates/customer/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>

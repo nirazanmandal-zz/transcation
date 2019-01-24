@@ -5,6 +5,9 @@
 
     <div class="container">
         <div class="row">
+            <a href="{% url 'units:create' %}" class=" btn btn-primary"><i class="fa fa-plus"></i> Add</a>
+        </div><br>
+        <div class="row">
             <div class="table-responsive">
                 <table class="table table-hover table-striped table-bordered">
                     <thead>
@@ -15,20 +18,19 @@
                     </tr>
                     </thead>
                     {% for data in data %}
-                    <tr>
-                        <td> {{ data.display_name }} </td>
-                        <td> {{ data.actual_name }} </td>
-                        <td>
-                            <a href="{% url 'units:update' data.id %}" class="btn">
-                                <i class="fa fa-pencil-square-o"></i></a>
-                            <a href="{% url 'units:delete' data.id %}" class="btn">
-                                <i class="fa fa-trash text-danger"></i></a>
-                        </td>
-                    </tr>
-                {% endfor %}
+                        <tr>
+                            <td> {{ data.display_name }} </td>
+                            <td> {{ data.actual_name }} </td>
+                            <td>
+                                <a href="{% url 'units:update' data.id %}" class="btn">
+                                    <i class="fa fa-2x fa-pencil-square-o"></i></a>
+                                <a href="{% url 'units:delete' data.id %}" class="btn">
+                                    <i class="fa fa-2x fa-trash text-danger"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </table>
             </div>
-            <a href="{% url 'units:create' %}" class=" btn btn-primary"><i class="fa fa-plus"></i> Add</a>
         </div>
     </div>
 {% endblock %}

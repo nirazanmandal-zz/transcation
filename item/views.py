@@ -39,6 +39,9 @@ def edit(request, pk):
 
 def delete(request, pk):
     context = {}
+    choice = request.GET.get('choice')
+    context['status'] = choice
+
     if request.method == "POST":
         try:
             data = Item.objects.get(id=pk)
@@ -46,9 +49,7 @@ def delete(request, pk):
             messages.error(request, "Item not found")
             return redirect("item:list")
 
-        choice = request.GET.get('choice')
         if choice == "undo":
-            context['status'] = 'Undo'
             data.is_deleted = False
             data.save()
         elif choice == "trash":
@@ -66,8 +67,14 @@ def delete(request, pk):
 
 def list(request):
     context = {}
-    # data = Item.objects.filter(is_deleted=False)
-    data = Item.objects.all()
+    data = Item.objects.filter(is_deleted=False)
+    context['data'] = data
+    return render(request, 'item/list.html', context)
+
+
+def trash_list(request):
+    context = {}
+    data = Item.objects.filter(is_deleted=True)
     context['data'] = data
     return render(request, 'item/list.html', context)
 
