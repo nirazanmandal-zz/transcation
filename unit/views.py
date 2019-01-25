@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, redirect
 from .forms import UnitCreateForm
 from .models import Unit
@@ -39,6 +40,16 @@ def update(request, pk):
 def list(request):
     context = {}
     data = Unit.objects.all()
+
+    per_page = 2
+    paginator = Paginator(data, per_page)
+    page = request.GET.get('page')
+    try:
+        data = paginator.page(page)
+    except PageNotAnInteger:
+        data = paginator.page(1)
+    except EmptyPage:
+        data = paginator.page(paginator.num_pages)
     context['data'] = data
     return render(request, 'unit/list.html', context)
 

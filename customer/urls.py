@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^list/$', views.list, name="list"),
     url(r'^update/(?P<pk>\d+)$', views.update, name="update"),
     url(r'^delete/(?P<pk>\d+)$', views.delete, name="delete"),
+    url(r'^trash/$', views.trash_list, name="trash_list"),
 ]

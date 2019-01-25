@@ -1,4 +1,6 @@
 import json
+
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
@@ -52,13 +54,17 @@ def delete(request, pk):
         if choice == "undo":
             data.is_deleted = False
             data.save()
-        elif choice == "trash":
+            messages.success(request, 'Undo successfully.')
+
+        elif choice == "Trash":
             data.is_deleted = True
             data.save()
+            messages.success(request, 'Trashed successfully.')
+
         elif choice == "delete" and data.is_deleted is True:
             data.delete()
+            messages.success(request, 'Deleted successfully.')
 
-        messages.success(request, 'Deleted successfully.')
         return redirect("item:list")
 
     context['url'] = reverse("item:list")
@@ -68,6 +74,18 @@ def delete(request, pk):
 def list(request):
     context = {}
     data = Item.objects.filter(is_deleted=False)
+
+    per_page = 2
+    paginator = Paginator(data, per_page)
+    page = request.GET.get('page')
+
+    try:
+        data = paginator.page(page)
+    except PageNotAnInteger:
+        data = paginator.page(1)
+    except EmptyPage:
+        data = paginator.page(paginator.num_pages)
+
     context['data'] = data
     return render(request, 'item/list.html', context)
 
@@ -75,6 +93,17 @@ def list(request):
 def trash_list(request):
     context = {}
     data = Item.objects.filter(is_deleted=True)
+
+    per_page = 2
+    paginator = Paginator(data, per_page)
+    page = request.GET.get('page')
+    try:
+        data = paginator.page(page)
+    except PageNotAnInteger:
+        data = paginator.page(1)
+    except EmptyPage:
+        data = paginator.page(paginator.num_pages)
+
     context['data'] = data
     return render(request, 'item/list.html', context)
 
